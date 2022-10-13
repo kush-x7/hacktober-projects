@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --gray-blue: hsl(217, 19%, 38%);
+  --dark-gray-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --font-quote: 1.75rem;
+  --padding: 28px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  font-family: Manrope;
+  font-size: var(--font-quote);
+  padding: 0 20px;
+}
+
+.advice-card {
+  width: 350px;
+  background-color: var(--dark-gray-blue);
+  /* text-align: center; */
+  text-align: center;
+  color: var(--light-cyan);
+  padding: var(--padding);
+  line-height: 1.5;
+  font-weight: 800;
+  border-radius: 1rem;
+  position: relative;
+}
+
+p.advice-id {
+  color: var(--neon-green);
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 2.25rem;
+}
+
+.divider {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.advice-generator-button {
+  position: absolute;
+  background-color: var(--neon-green);
+  padding: 20px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* top: 0; */
+  /* left: 0; */
+  /* left: 220px; */
+  left: calc(50% - 1.85rem);
+}
+
+.advice-generator-button:hover,
+.advice-generator-button:focus {
+  box-shadow: 0 0 25px 8px var(--neon-green);
+}
+
+@media screen and (width >= 550px) {
+  .advice-card {
+    width: 540px;
+  }
+}
