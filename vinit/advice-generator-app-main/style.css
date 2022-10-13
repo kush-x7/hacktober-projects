@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue : hsl(217, 19%, 24%);
+--DarkBlue : hsl(218, 23%, 16%);
+
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+}
+
+#container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: var(--DarkBlue);
+    position: absolute;
+
+   
+}
+.card{
+   
+    /* height: 330px; */
+    width: 50%;
+    background-color: var(--DarkGrayishBlue);
+    position: relative;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+.advice-id {
+    color: var(--NeonGreen);
+    /* padding-top: 50px; */
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: .4rem;
+}
+#advice-button{
+    position: absolute;
+    background-color: var(--NeonGreen);
+    padding: 20px;
+    border-radius: 50%;
+    /* height: 60px;
+    width: 60px; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    top:100%;
+}
+
+
+.divide{
+    width: 100%;
+    height: 16px; 
+    /* padding-top: 30px; */
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.advice-description{
+    padding-top: 5%;
+    font-size: 28px;
+    color: var(--LightCyan);
+    font-weight: 800;
+}
+#advice-button:hover,
+#advice-button:focus{
+    box-shadow: 0 0 25px 2px var(--NeonGreen);
+}
+ @media (max-width:420px) {
+    body{
+        background-color: var(--DarkBlue);
+    } 
+
+    .card{
+        width: 90%;
+    }
+    .divider{
+        width: 90%;
+  
+    }
+    .advice-description{
+        padding: 0;
+        margin: 0;
+    }
+    .advice-id{
+        padding-top: 1rem 0 ;
+       
+    }
+}
+@media (max-width:920px){
+    .card{
+        width: 85%;
+    }
+}
